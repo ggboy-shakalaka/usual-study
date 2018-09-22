@@ -18,7 +18,7 @@ public class Demo {
 			return;
 		}
 
-		FileDownloadImpl fileDownload = new FileDownloadImpl("C:/Users/A/Desktop/temp/小视频/temp", "success.exe", length);
+		FileDownloadImpl fileDownload = new FileDownloadImpl("C:/Users/A/Desktop", "success.exe", length);
 		fileDownload.addTask(resp.getEntity().getContent());
 
 		long size = 0;

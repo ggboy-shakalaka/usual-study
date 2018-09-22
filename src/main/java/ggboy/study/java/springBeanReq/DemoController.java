@@ -1,7 +1,5 @@
 package ggboy.study.java.springBeanReq;
 
-import java.lang.reflect.Method;
-
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -15,11 +13,6 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.alibaba.fastjson.JSON;
 
-import ggboy.study.java.common.utils.http.HttpRequestUtil;
-import ggboy.study.java.common.utils.http.HttpResponseUtil;
-import ggboy.study.java.common.utils.serialize.SerializableUtil;
-import ggboy.study.java.common.utils.string.StringUtil;
-import ggboy.study.java.springBeanReq.info.DemoReq;
 import ggboy.study.java.springBeanReq.info.ReqInfo;
 import ggboy.study.java.springBeanReq.info.RespInfo;
 
@@ -48,12 +41,6 @@ public class DemoController {
 	@RequestMapping(value = "getthing.html", method = { RequestMethod.POST })
 	public void getthing(HttpServletRequest request, HttpServletResponse response) {
 		try {
-			byte[]  reqData = HttpRequestUtil.req2Byte(request);
-			DemoReq demoReq = SerializableUtil.reverseSerialize(reqData, DemoReq.class);
-			Object obj = context.getBean(StringUtil.toLowerCase(demoReq.getClazz().getSimpleName()));
-			Method method = obj.getClass().getMethod(demoReq.getMethod(), demoReq.getParameterTypes());
-			Object respObj = method.invoke(obj, demoReq.getParameters());
-			HttpResponseUtil.write(response, SerializableUtil.serialize(respObj));
 		} catch (Exception e) {
 			e.printStackTrace();
 		}

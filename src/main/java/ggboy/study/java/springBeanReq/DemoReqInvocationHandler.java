@@ -6,8 +6,8 @@ import java.lang.reflect.Method;
 import org.apache.http.HttpResponse;
 import org.apache.http.util.EntityUtils;
 
-import ggboy.study.java.common.utils.http.SimpleHttpClient;
-import ggboy.study.java.common.utils.serialize.SerializableUtil;
+import ggboy.java.common.http.SimpleHttpClient;
+import ggboy.java.common.utils.serialize.SerializableUtil;
 import ggboy.study.java.springBeanReq.info.DemoReq;
 
 public class DemoReqInvocationHandler implements InvocationHandler {
@@ -29,8 +29,8 @@ public class DemoReqInvocationHandler implements InvocationHandler {
 			url = "http://127.0.0.1/study/getthing.html";
 		}
 
-		HttpResponse resp = SimpleHttpClient.post(SimpleHttpClient.client(), url, SerializableUtil.serialize(req));
-
+//		HttpResponse resp = SimpleHttpClient.getClient().get(url, SerializableUtil.serialize(req));
+		HttpResponse resp = null;
 		return SerializableUtil.reverseSerialize(EntityUtils.toByteArray(resp.getEntity()), method.getReturnType());
 	}
 }

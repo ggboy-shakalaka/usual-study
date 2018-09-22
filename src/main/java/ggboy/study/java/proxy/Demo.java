@@ -1,21 +1,36 @@
 package ggboy.study.java.proxy;
 
-public interface Demo {
-	public void action();
-	public String action2();
+import java.lang.reflect.Method;
+import java.lang.reflect.Proxy;
+
+public class Demo {
+	public static void main(String[] args) {
+		DemoInterface demo = ProxyHandler.applyProxy(new DemoImplements());
+		System.out.println(demo.action());
+	}
 }
 
-class Demo1 implements Demo{
+interface DemoInterface {
+	public String action();
+}
 
+class DemoImplements implements DemoInterface {
 	@Override
-	public void action() {
-		System.out.println("action");
+	public String action() {
+		System.out.println("in action method...");
+		return "action method return message";
 	}
+}
 
-	@Override
-	public String action2() {
-		System.out.println("action2");
-		return "action2 return method";
+class ProxyHandler {
+	@SuppressWarnings("unchecked")
+	public static <T> T applyProxy(final T obj) {
+		return (T) Proxy.newProxyInstance(ProxyHandler.class.getClassLoader(), obj.getClass().getInterfaces(),
+				(Object proxy, Method method, Object[] args) -> {
+					System.out.println("before invoke");
+					Object result = method.invoke(obj, args);
+					System.out.println("after invoke");
+					return result;
+				});
 	}
-	
 }
