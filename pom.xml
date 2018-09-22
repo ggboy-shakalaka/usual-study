@@ -97,6 +97,14 @@
 			<version>1.3.1</version>
 		</dependency>
 
+		<!-- git -->
+		<dependency>
+			<groupId>com.madgag</groupId>
+			<artifactId>org.eclipse.jgit</artifactId>
+			<version>3.4.0.1.1-UNOFFICIAL-ROBERTO-RELEASE</version>
+		</dependency>
+
+
 		<!-- self -->
 		<dependency>
 			<groupId>java.ggboy.utils</groupId>
