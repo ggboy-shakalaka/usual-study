@@ -6,11 +6,11 @@ import java.io.OutputStream;
 import java.net.Socket;
 import java.net.UnknownHostException;
 
-import mustry.common.exception.CommonUtilException;
-import mustry.common.utils.array.ArrayUtil;
-import mustry.common.utils.bytee.ByteUtil;
-import mustry.common.utils.io.IoUtil;
-import mustry.common.utils.string.StringUtil;
+import ggboy.java.common.exception.CommonUtilException;
+import ggboy.java.common.utils.array.ArrayUtil;
+import ggboy.java.common.utils.bytee.ByteUtil;
+import ggboy.java.common.utils.io.IoUtil;
+import ggboy.java.common.utils.string.StringUtil;
 
 public class SocketClient {
 

@@ -1,3 +1,10 @@
+/*
+ * 未完成
+ * 本想着能从class文件中直接筛选出拥有特定注解的类进行返回
+ * 扫描到真正的注解时遇见了特别麻烦的规则，注解中的内容需要进行详细的区分而没有特定的length进行跳过
+ * 所以放弃了
+ * 不过能从class文件中获取到类的全限定名，可从ClassLoader中直接加载再进行判断
+ */
 package ggboy.study.java.beans;
 
 import java.io.File;
@@ -17,12 +24,10 @@ import java.util.jar.JarFile;
 
 import ggboy.study.java.classFile.ClassReader;
 
-/*
- * 未完成
- * 本想着能从class文件中直接筛选出拥有特定注解的类进行返回
- * 扫描到真正的注解时遇见了特别麻烦的规则，注解中的内容需要进行详细的区分而没有特定的length进行跳过
- * 所以放弃了
- * 不过能从class文件中获取到类的全限定名，可从ClassLoader中直接加载再进行判断
+/**
+ * 扫描包名下的所有class名称
+ * @author ZhouQ
+ *
  */
 public class Scanner {
 	public static void main(String[] args) throws Exception {

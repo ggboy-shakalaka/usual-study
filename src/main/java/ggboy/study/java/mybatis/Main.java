@@ -8,8 +8,8 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import com.alibaba.fastjson.JSON;
 
-import mustry.common.exception.CommonUtilException;
-import mustry.common.utils.sql.mysql.Select;
+import ggboy.java.common.exception.CommonUtilException;
+import ggboy.java.common.utils.sql.mysql.Select;
 
 public class Main {
 	public static void main(String[] args) throws CommonUtilException {

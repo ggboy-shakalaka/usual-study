@@ -3,7 +3,7 @@ package ggboy.study.java.mybatis;
 import java.util.List;
 import java.util.Map;
 
-import mustry.common.utils.sql.BaseSqlBuilder;
+import ggboy.java.common.utils.sql.BaseSqlBuilder;
 
 public interface BaseDao {
 	public int insert(BaseSqlBuilder builder);

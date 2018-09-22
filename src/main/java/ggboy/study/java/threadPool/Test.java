@@ -1,6 +1,6 @@
 package ggboy.study.java.threadPool;
 
-import mustry.common.thread.pool.ThreadPool;
+import ggboy.java.common.thread.pool.ThreadPool;
 
 public class Test {
 	public static void main(String[] args) {

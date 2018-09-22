@@ -1,6 +1,6 @@
 package ggboy.study.java.serial;
 
-import mustry.common.exception.CommonUtilException;
+import ggboy.java.common.exception.CommonUtilException;
 
 public class Main {
 	public static void main(String[] args) throws CommonUtilException {

@@ -3,8 +3,8 @@ package ggboy.study.java.httpDownload;
 import org.apache.http.Header;
 import org.apache.http.HttpResponse;
 
-import mustry.common.download.impl.FileDownloadImpl;
-import mustry.common.http.SimpleHttpClient;
+import ggboy.java.common.download.impl.FileDownloadImpl;
+import ggboy.java.common.http.SimpleHttpClient;
 
 public class Demo {
 	public static void main(String[] args) throws Exception {

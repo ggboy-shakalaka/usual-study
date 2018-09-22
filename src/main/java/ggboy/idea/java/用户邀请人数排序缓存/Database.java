@@ -6,7 +6,7 @@ import java.sql.SQLException;
 import com.mysql.jdbc.Connection;
 import com.mysql.jdbc.PreparedStatement;
 
-import mustry.common.utils.uuid.UuidUtil;
+import ggboy.java.common.utils.uuid.UuidUtil;
 
 public class Database {
 	private final Connection conn;

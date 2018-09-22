@@ -1,7 +1,7 @@
 package ggboy.study.java.consensus;
 
-import mustry.common.exception.CommonUtilException;
-import mustry.common.utils.bean.BeanUtil;
+import ggboy.java.common.exception.CommonUtilException;
+import ggboy.java.common.utils.bean.BeanUtil;
 
 public abstract class Consensus<K, V> {
 	protected Data<K, V> data;
